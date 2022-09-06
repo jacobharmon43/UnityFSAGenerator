@@ -4,7 +4,8 @@ namespace FSA
 {
     /* How to use:
      * 
-     * Nothing here is that crazy, it just stores logic and a state.
+     * Reading the code would suffice, but its just a class that holds a boolean check
+     * and a desired next state if that check is true
      * 
      */
 
