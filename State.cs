@@ -7,7 +7,8 @@ namespace FSA
      * 
      * The only thing you need to really know, outside of how to construct it
      * is that the transitions list is order-important, so order things in terms
-     * of their importance.
+     * of their importance. Or dont allow multiple transitions to be true at once via more complex
+     * checks
      * 
      */
 
