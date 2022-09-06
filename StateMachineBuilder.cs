@@ -22,6 +22,7 @@ namespace FSA
      *                          .WithState("Y")
      *                          .WithOnEnter( () => { foobar(); } )
      *                          .Build()
+     * See ReadMe for a more flushed out example.
      */
 
 
