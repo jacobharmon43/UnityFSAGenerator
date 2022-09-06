@@ -5,8 +5,8 @@ namespace FSA
     /* How to use:
      * 
      * Once you have set up the statemachine either by meticulously constructing it, or using the builder I wrote
-     * Just run RunStateMachine() in the Update() method, or call it whenever, it mostly does its own managing and logic
-     * it doesn't really care when
+     * Just run RunStateMachine() in the Update() method, or wherever you want it to run. It handles all the logic otherwise
+     * itself
      * 
      */
 
