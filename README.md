@@ -16,9 +16,9 @@ I found myself at some point a year ago or something writing a huge amount of if
   * This will probably just be a behaviour that attaches statemachines by decomposing into their builder and then appending said builder on
   * It already does support statemachines WITHIN statemachines which is similar, but this effect would be more like assembling a vertical movement statemachine and combining it with the horizontal movement statemachine (they could likely run separately though so maybe not)
 
-*Add constructors to builder that accept pre-defined states with transitions, and predefined transitions if wanted.
-*Move WithTransitionFromAnyState to a global builder command that can be placed anywhere, even where it makes no sense
-*Reword naming of builder functions to sound better in English IE
+ *Add constructors to builder that accept pre-defined states with transitions, and predefined transitions if wanted.
+ *Move WithTransitionFromAnyState to a global builder command that can be placed anywhere, even where it makes no sense
+ *Reword naming of builder functions to sound better in English IE
   * Create a statemachine WithState().That().FiresOnEntry().Runs().FiresOnExit().TransitionsTo().End() Where That() and End() open and close the builder section
     *Function naming tbd
     
