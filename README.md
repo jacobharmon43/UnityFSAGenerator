@@ -46,7 +46,7 @@ I found myself at some point a year ago or something writing a huge amount of if
   }
 
   void Update(){
-      _coyoteStateMachine.RunStateMachine();
+      _coyoteStateMachine.RunStateMachine(Time.deltaTime);
       //... Rest of the code here
   }
  ```
