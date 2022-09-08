@@ -18,8 +18,8 @@ I found myself at some point a year ago or something writing a huge amount of if
 
 - [ ] Add constructors to builder that accept pre-defined states with transitions, and predefined transitions if wanted.
 - [ ] Move WithTransitionFromAnyState to a global builder command that can be placed anywhere, even where it makes no sense
-- [ ] Reword naming of builder functions to sound better in English IE
-  - Create a statemachine WithState().That().FiresOnEntry().Runs().FiresOnExit().TransitionsTo().End() Where That() and End() open and close the builder section (Function naming tbd)
+- [ ] Reword naming of builder functions to sound better in English:Createing a statemachine    .WithState().That().FiresOnEntry().Runs().FiresOnExit().TransitionsTo().End() Where That() and End() open and close the builder section (Function naming tbd)
+- [ ] Visualization tool
     
 ### Example C# Unity usecase:
 
