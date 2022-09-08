@@ -54,7 +54,7 @@ I found myself at some point a year ago or something writing a huge amount of if
  ### Comparison with the same usecase:
  ```cs
   float _coyoteDuration = 0.2;
-  float _coyoteTimer
+  float _coyoteTimer = 0;
   bool _jumpAllowed = false;
   
   void Update(){
