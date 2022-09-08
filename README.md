@@ -21,6 +21,7 @@ I found myself at some point a year ago or something writing a huge amount of if
 - [ ] Reword naming of builder functions to sound better in English:Createing a statemachine    ```cs.WithState().That().FiresOnEntry().Runs().FiresOnExit().TransitionsTo().End()```
  Where That() and End() open and close the builder section (Function naming tbd)
 - [ ] Visualization tool
+- [ ] Intentional transition priority (not just creation order) that uses creation order ONLY as a fallback
     
 ### Example C# Unity usecase:
 
