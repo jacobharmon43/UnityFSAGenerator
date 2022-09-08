@@ -8,6 +8,7 @@ The builder class is simply a class that makes constructing a statemachine prett
 
 Example C# Unity usecase:
 
+```cs
   void Start(){
       _playerStateMachine = new StateMachineBuilder()
           .WithState("Idle")
@@ -48,7 +49,8 @@ Example C# Unity usecase:
   {
       _playerStateMachine.RunStateMachine();
   }
-  
+ ```
+ 
 # Why
 
 * I think it makes code writing easier and cleaner
