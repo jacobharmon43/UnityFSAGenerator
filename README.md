@@ -75,6 +75,36 @@ I found myself at some point a year ago or something writing a huge amount of if
     //...Rest of the logic
   }
  ```
+
+### Another usecase and comparison where it may be easier NOT to use this library
+```cs
+        /// GOAL: Make sprite flip left when you walk left
+        /// GOAL: Make sprite flip right when you walk right
+        /// GOAL: Sprite will not flip if you are not moving
+        /// NOTE: LookedRight => Positive movement input
+        /// NOTE: LookedLeft => Negative movement input
+        _spriteFlipStateMachine = new StateMachineBuilder()
+            .WithState("Left")
+            .WithOnEnter(() => _sprite.flipX = true)
+            .WithTransition("Right", LookedRight)
+
+            .WithState("Right")
+            .WithOnEnter(() => _sprite.flipX = false)
+            .WithTransition("Left", LookedLeft)
+
+            .Build();
+
+        /// VS
+        
+        if (_sprite.flipX && LookedRight()) {
+            _sprite.flipX = false;
+        } else if (!_sprite.flipX && LookedLeft()) {
+            _sprite.flipX = true;
+        }
+        /// OR
+        _sprite.flipX = (_sprite.flipX && LookedRight()) ? false : (!_sprite.flipX && LookedLeft()) ? true : _sprite.flipX;
+        /// The one liner is horrific to read, and the if statements above are fine I guess, I just prefer the look of my solution.
+```
  
  ## Comparison Overview
   While being marginally less lines of code (I didn't actually count) the non-statemachine based code is a lot less readable from the get-go, and requires 3 global variables to track information instead of just 1 (although TECHNICALLY the statemachine creates 3 class variables, 4 transition variables, and one machine variable itself) those are all hidden so I'm willingly ignoring them to make a case for my class's usage.
