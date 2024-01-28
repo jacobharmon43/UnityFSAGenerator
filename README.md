@@ -104,10 +104,4 @@ I found myself at some point a year ago or something writing a huge amount of if
         /// OR
         _sprite.flipX = (_sprite.flipX && LookedRight()) ? false : (!_sprite.flipX && LookedLeft()) ? true : _sprite.flipX;
         /// The one liner is horrific to read, and the if statements above are fine I guess, I just prefer the look of my solution.
-```
- 
- ## Comparison Overview
-  While being marginally less lines of code (I didn't actually count) the non-statemachine based code is a lot less readable from the get-go, and requires 3 global variables to track information instead of just 1 (although TECHNICALLY the statemachine creates 3 class variables, 4 transition variables, and one machine variable itself) those are all hidden so I'm willingly ignoring them to make a case for my class's usage.
-
-  But seriously, you can show my code to a middle schooler and they'd likely have a good idea of what it does, while the other code is a mixed bag due to its multiple nested if statements and tedious timer tracking that requires two variables, frankly that code might not work I didn't bother to test it. Regardless of any of that, I just think my setup is way better.
-   
+```   
