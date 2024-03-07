@@ -2,28 +2,22 @@ using System;
 
 namespace FSA
 {
-    /* How to use:
-     * 
-     * Reading the code would suffice, but its just a class that holds a boolean check
-     * and a desired next state if that check is true
-     * 
-     */
-
+    /// <summary>
+    /// Stores a condition, and a state name to transition to
+    /// </summary>
     public class Transition
     {
-        public State NextState { get; private set; }
-        private Func<bool> condition;
+        public string NextState { get; private set; }
+        private readonly Func<bool> _condition;
 
-        public Transition(Func<bool> condition, State nextState)
-        {
-            this.condition = condition;
-            this.NextState = nextState;
+        public Transition(string nextState, Func<bool> condition) {
+            _condition = condition;
+            NextState = nextState;
         }
 
-        public bool Check()
-        {
-            if(condition == null) return false;
-            return condition.Invoke();
+        public bool Check() {
+            if(_condition == null) return false;
+            return _condition.Invoke();
         }
     }
 }
